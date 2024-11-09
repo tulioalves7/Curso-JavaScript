@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Curso JavaScript - Tulio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p id="paragrafo">Este texto pode ser ocultado</p>
+        <button onclick="toggleParagrafo()">Ocultar/Mostrar</button>
+    </div>
+  <script>
+    function toggleParagrafo() {
+      let p = document.getElementById('paragrafo');
+      p.style.display = p.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

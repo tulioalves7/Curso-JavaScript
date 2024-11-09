@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Curso JavaScript - Tulio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p id="texto">Texto original</p>
+        <button onclick="mudarTexto()">Mudar Texto</button>
+    </div>
+  <script>
+    function mudarTexto() {
+      document.getElementById('texto').textContent = 'Texto alterado!';
+    }
+  </script>
+</body>
+</html>

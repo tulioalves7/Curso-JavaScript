@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Curso JavaScript - Tulio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="cor" placeholder="Digite uma cor">
+        <button onclick="mudarCorDeFundo()">Mudar Cor de Fundo</button>
+    </div>
+  <script>
+    function mudarCorDeFundo() {
+      document.body.style.backgroundColor = document.getElementById('cor').value;
+    }
+  </script>
+</body>
+</html>

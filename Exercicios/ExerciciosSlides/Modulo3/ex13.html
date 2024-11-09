@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Curso JavaScript - Tulio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Bem-vindo!</h1>
+    <p>Por favor, preencha seus dados abaixo:</p>
+
+    <form onsubmit="exibirSaudacao(event)">
+      <input type="text" id="nome" placeholder="Digite seu nome" required>
+      <input type="number" id="idade" placeholder="Digite sua idade" required>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="saudacao"></p>
+  </div>
+
+  <script>
+    const hora = 22; 
+
+
+    function definirPeriodo() {
+      let saudacao = "";
+      let corDeFundo = "";
+
+      if (hora >= 5 && hora < 12) {
+        saudacao = "Bom dia";
+        corDeFundo = "#FFE5B4"; 
+      } else if (hora >= 12 && hora < 17) {
+        saudacao = "Boa tarde";
+        corDeFundo = "#FFD700"; 
+      } else if (hora >= 17 && hora < 20) {
+        saudacao = "Boa noite";
+        corDeFundo = "#9370DB"; 
+      } else {
+        saudacao = "Boa noite";
+        corDeFundo = "#191970"; 
+      }
+
+      document.body.style.backgroundColor = corDeFundo;
+      return saudacao;
+    }
+
+    function exibirSaudacao(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nome").value;
+      const idade = document.getElementById("idade").value;
+      const saudacao = definirPeriodo();
+
+      document.getElementById("saudacao").textContent = `${saudacao}, ${nome}! Você tem ${idade} anos.`;
+    }
+
+    definirPeriodo();
+  </script>
+
+</body>
+</html>

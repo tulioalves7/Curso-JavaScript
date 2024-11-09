@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Curso JavaScript - Tulio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="mostrarDataHora()">Mostrar Data e Hora</button>
+        <p id="dataHora"></p>
+    </div>
+  <script>
+    function mostrarDataHora() {
+      document.getElementById('dataHora').textContent = new Date();
+    }
+  </script>
+</body>
+</html>

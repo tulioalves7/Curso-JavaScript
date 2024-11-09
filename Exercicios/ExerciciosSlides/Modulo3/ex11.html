@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Curso JavaScript - Tulio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="idade" placeholder="Digite sua idade">
+        <button onclick="verificarIdade()">Verificar</button>
+        <p id="mensagem"></p>
+    </div>
+  <script>
+    function verificarIdade() {
+      let idade = parseInt(document.getElementById('idade').value);
+      document.getElementById('mensagem').textContent = idade >= 18 ? "Maior de idade" : "Menor de idade";
+    }
+  </script>
+</body>
+</html>
